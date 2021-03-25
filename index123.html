@@ -1,0 +1,65 @@
+<!doctype html>
+<title>Example</title>
+<style>
+  @media only screen and (min-width: 600px and max-width: 600px){
+#grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 2vw;
+  border: 1px solid black;
+
+  }
+#grid > div {
+  font-size: 5vw;
+  padding: .5em;
+  background: gold;
+  text-align: center;
+}
+.header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.menu{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.main{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.right{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.footer{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 3;
+
+}}
+
+
+</style>
+<div id="grid">
+  <div class="header">header</div>
+  <div class="menu">menu</div>
+  <div class="main">main</div>
+  <div class="right">right</div>
+  <div class="footer">footer</div>
+
+
+<?php
+echo $_SERVER['HTTP_USER_AGENT'];
+?>
+
+</div>
